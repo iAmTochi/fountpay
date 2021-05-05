@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use App\Product;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,18 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
+        $cat1 = Category::create([
+            'name' => 'Welcome Area & Reception',
+        ]);
+        $cat2 = Category::create([
+            'name' => 'Solutions Café – Idea Café',
+        ]);
+        $cat3 = Category::create([
+            'name' => 'Conference Booths/Meeting',
+        ]);
+        $cat4 = Category::create([
+            'name' => 'Executive Conference Room',
+        ]);
         Product::create([
             'name' => 'Prosperity of the righteous',
             'image' => 'uploads/products/book.png',
