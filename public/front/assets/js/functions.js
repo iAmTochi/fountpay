@@ -357,7 +357,7 @@
 	                    _this.addClass('active');
 	                    _this.parents().siblings('.tab-contents').find('.active').removeClass('active');
 	                    _this.parents().siblings('.tab-contents').find(_this.attr('href')).addClass('active');
-                    }  
+                    }
                 });
             }
 
@@ -403,9 +403,9 @@
 				$(".quantity-input").on('click', '.btn', function(event) {
 					event.preventDefault();
 					var _this = $(this),
-						_input = _this.siblings('input[name=product-quatity]'),
-						_current_value = _this.siblings('input[name=product-quatity]').val(),
-						_max_value = _this.siblings('input[name=product-quatity]').attr('data-max');
+						_input = _this.siblings('input[name=qty]'),
+						_current_value = _this.siblings('input[name=qty]').val(),
+						_max_value = _this.siblings('input[name=qty]').attr('data-max');
 					if(_this.hasClass('btn-reduce')){
 						if (parseInt(_current_value, 10) > 1) _input.val(parseInt(_current_value, 10) - 1);
 					}else {
@@ -418,7 +418,7 @@
 		mercado_remove_product_in_cart: function(){
 			if($(".products-cart .pr-cart-item").length > 0){
 				$(document).on('click', '.pr-cart-item .delete .btn-delete', function(event) {
-					event.preventDefault();
+					//event.preventDefault(); remove by tochi
 					$(this).closest('.pr-cart-item').remove();
 				});
 			}

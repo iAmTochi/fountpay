@@ -19,6 +19,7 @@ Route::get('/cart', 'ShoppingController@cart')->name('cart');
 Route::get('/cart/delete/{id}', 'ShoppingController@cartDelete')->name('cart.delete');
 Route::get('/cart/increment/{id}/{qty}', 'ShoppingController@increment')->name('cart.increment');
 Route::get('/cart/decrement/{id}/{qty}', 'ShoppingController@decrement')->name('cart.decrement');
+Route::get('/cart/clear', 'ShoppingController@clearCart')->name('cart.clear');
 
 
 Route::get('/cart/checkout', 'CheckoutController@index')->name('cart.checkout');

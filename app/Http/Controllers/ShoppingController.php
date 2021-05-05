@@ -31,7 +31,7 @@ class ShoppingController extends Controller
     public function cart(){
         if(Cart::content()->count() == 0){
             session()->flash('info', "Your cart is empty, do some shopping.");
-            return redirect()->back();
+            return redirect(url('/'));
         }
         //Cart::destroy();
         return view('cart');
@@ -77,5 +77,11 @@ class ShoppingController extends Controller
         session()->flash('success', $pdt->name." Book added to cart.");
 
         return redirect()->back();
+    }
+
+    public function clearCart(){
+        Cart::destroy();
+        session()->flash('success', "Your cart has been clear, start shopping");
+        return redirect(url('/'));
     }
 }

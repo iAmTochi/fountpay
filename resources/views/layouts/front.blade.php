@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"  />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front') }}/assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -35,7 +36,7 @@
                     <div class="topbar-menu left-menu">
                         <ul>
                             <li class="menu-item" >
-                                <a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                                <a title="Hotline: (+234) 803 6037 038" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+234) 803 6037 038</a>
                             </li>
                         </ul>
                     </div>
@@ -43,29 +44,29 @@
                         <ul>
                             <li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
                             <li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
-                            <li class="menu-item lang-menu menu-item-has-children parent">
-                                <a title="English" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu lang" >
-                                    <li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-                                    <li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-                                    <li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-                                    <li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children parent" >
-                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu curency" >
-                                    <li class="menu-item" >
-                                        <a title="Pound (GBP)" href="#">Pound (GBP)</a>
-                                    </li>
-                                    <li class="menu-item" >
-                                        <a title="Euro (EUR)" href="#">Euro (EUR)</a>
-                                    </li>
-                                    <li class="menu-item" >
-                                        <a title="Dollar (USD)" href="#">Dollar (USD)</a>
-                                    </li>
-                                </ul>
-                            </li>
+{{--                            <li class="menu-item lang-menu menu-item-has-children parent">--}}
+{{--                                <a title="English" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>--}}
+{{--                                <ul class="submenu lang" >--}}
+{{--                                    <li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>--}}
+{{--                                    <li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>--}}
+{{--                                    <li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>--}}
+{{--                                    <li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="{{ asset('front') }}/assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                            <li class="menu-item menu-item-has-children parent" >--}}
+{{--                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>--}}
+{{--                                <ul class="submenu curency" >--}}
+{{--                                    <li class="menu-item" >--}}
+{{--                                        <a title="Pound (GBP)" href="#">Pound (GBP)</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="menu-item" >--}}
+{{--                                        <a title="Euro (EUR)" href="#">Euro (EUR)</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="menu-item" >--}}
+{{--                                        <a title="Dollar (USD)" href="#">Dollar (USD)</a>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>
@@ -75,7 +76,7 @@
                 <div class="mid-section main-info-area">
 
                     <div class="wrap-logo-top left-section">
-                        <a href="index.html" class="link-to-home"><img src="{{ asset('front') }}/assets/images/logo-top-1.png" alt="mercado"></a>
+                        <a href="{{ url('/') }}" class="link-to-home"><img src="{{ asset('front') }}/assets/fountpay.jpeg" alt="mercado"></a>
                     </div>
 
                     <div class="wrap-search center-section">
@@ -121,10 +122,10 @@
                             </a>
                         </div>
                         <div class="wrap-icon-section minicart">
-                            <a href="#" class="link-direction">
+                            <a href="{{ route('cart') }}" class="link-direction">
                                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                 <div class="left-info">
-                                    <span class="index">4 items</span>
+                                    <span class="index">{{ Cart::content()->count() }} items</span>
                                     <span class="title">CART</span>
                                 </div>
                             </a>
@@ -158,7 +159,7 @@
                     <div class="container">
                         <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
                             <li class="menu-item home-icon">
-                                <a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                <a href="{{ url('/') }}" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
                             </li>
 {{--                            <li class="menu-item">--}}
 {{--                                <a href="about-us.html" class="link-term mercado-item-title">About Us</a>--}}
@@ -167,7 +168,7 @@
 {{--                                <a href="shop.html" class="link-term mercado-item-title">Shop</a>--}}
 {{--                            </li>--}}
                             <li class="menu-item">
-                                <a href="cart.html" class="link-term mercado-item-title">Cart</a>
+                                <a href="{{ route('cart') }}" class="link-term mercado-item-title">Cart</a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('cart.checkout') }}" class="link-term mercado-item-title">Checkout</a>
@@ -449,5 +450,20 @@
 <script src="{{ asset('front') }}/assets/js/jquery.countdown.min.js"></script>
 <script src="{{ asset('front') }}/assets/js/jquery.sticky.js"></script>
 <script src="{{ asset('front') }}/assets/js/functions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<!-- ...end JS Script -->
+
+<script>
+
+    @if(session()->has('success'))
+    toastr.success('{{session()->get('success')}}')
+
+    @elseif(session()->has('info'))
+    toastr.info('{{session()->get('info')}}')
+    @endif
+</script>
+
+</body>
 </body>
 </html>

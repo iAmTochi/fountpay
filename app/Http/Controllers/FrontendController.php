@@ -12,6 +12,6 @@ class FrontendController extends Controller
     }
 
     public function singleProduct($id){
-        return view('single')->with('product', Product::find($id));
+        return view('detail')->with('product', Product::find($id));
     }
 }
