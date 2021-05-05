@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -23,7 +24,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $category = Category::all();
+
+        return view('admin.category.category', compact('category'));
     }
 
     /**
@@ -34,7 +37,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'category_name' => 'required|unique:categories|max:60'
+        ]);
+
+        $category = new Category();
+        $category->category_name = $request->category_name;
+        $category->save();
+
+        return redirect()->route('categories.index');
     }
 
     /**
